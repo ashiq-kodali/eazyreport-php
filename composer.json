@@ -1,0 +1,64 @@
+{
+    "name": "ashiq-kodali/eazyreport",
+    "description": "Modern banded document and invoice reporting engine for PHP and Laravel. Render .rtpl templates to printable HTML and vector PDF.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ashiq Kodali",
+            "email": "itzmeask@gmail.com",
+            "homepage": "https://github.com/ashiq-kodali"
+        },
+        {
+            "name": "Thameem PK"
+        }
+    ],
+    "homepage": "https://eazyreport.in",
+    "keywords": [
+        "reporting",
+        "invoice",
+        "pdf",
+        "printing",
+        "barcode",
+        "qrcode",
+        "chart",
+        "rtpl",
+        "fastreport",
+        "html",
+        "handlebars",
+        "laravel",
+        "php"
+    ],
+    "require": {
+        "php": ">=8.1.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0 || ^11.0"
+    },
+    "suggest": {
+        "dompdf/dompdf": "Required for in-memory vector PDF generation (^2.0 || ^3.0)",
+        "illuminate/support": "Required for Laravel Facade and Service Provider auto-discovery"
+    },
+    "autoload": {
+        "psr-4": {
+            "EazyReport\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "EazyReport\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "EazyReport\\Laravel\\EazyReportServiceProvider"
+            ],
+            "aliases": {
+                "EazyReport": "EazyReport\\Laravel\\Facades\\EazyReport"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
